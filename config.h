@@ -1,15 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-Terminusmodx.Icons-medium-r-*-*-12-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#9a7474";
-static const char normbgcolor[]     = "#332d29";
-static const char normfgcolor[]     = "#ededf7";
-static const char selbordercolor[]  = "#9a7474";
-static const char selbgcolor[]      = "#9a7474";
-static const char selfgcolor[]      = "#ededf7";
+static const char font[]            = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
+static const char normbordercolor[] = "#D4CFC7";
+static const char normbgcolor[]     = "#FFFFFF";
+static const char normfgcolor[]     = "#00000A";
+static const char selbordercolor[]  = "#DCDAD5";
+static const char selbgcolor[]      = "#DCDAD5";
+static const char selfgcolor[]      = "#00000A";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gap pixel between windows */
+static const unsigned int gappx     = 0;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const Bool showsystray       = True;     /* False means no systray */
@@ -18,14 +18,15 @@ static const Bool topbar            = True;     /* False means bottom bar */
 static const Bool showtitle         = False;    /* True means show title in status bar */
 
 /* tagging */
-static const char *tags[] = { "Ñ main", "® web", "¨ files", "¸ ent", "½ term", " " };
+static const char *tags[] = { " main", " web", " files", " ent", " term", " " };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
 	{ "urxvt",     NULL,       NULL,       0,            True,        -1 },
-	{ "Iceweasel",  NULL,       NULL,       1 << 1,       False,       -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       False,       -1 },
 	{ "Thunar",   NULL,       NULL,       1 << 2,       False,       -1 },
+	{ "Chromium",   NULL,       NULL,       1 << 3,       False,       -1 },
 	{ "lowriter",   NULL,       NULL,       2 << 3,       False,       -1 },
 	{ "mendeleydesktop",   NULL,       NULL,       2 << 3,       False,       -1 },
 };
@@ -37,9 +38,9 @@ static const Bool resizehints = False; /* True means respect size hints in tiled
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "þ",      tile },    /* first entry is default */
-	{ "ý",      NULL },    /* no layout function means floating behavior */
-	{ "ÿ",      monocle },
+	{ "»» T",      tile },    /* first entry is default */
+	{ "»» F",      NULL },    /* no layout function means floating behavior */
+	{ "»» M",      monocle },
 };
 
 /* key definitions */
